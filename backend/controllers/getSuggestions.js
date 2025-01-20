@@ -1,6 +1,6 @@
-import { openAIClient,  visionClient} from "../utils/clients.js";
+import {visionClient} from "../utils/clients.js";
+import { openAIClient } from "../index.js";
 import fs from 'fs';
-
 
 async function analyzePost(content, platform, audienceSize, hashtags, nature, imageInsights) {
     const prompt = `Analyze the following social media post and provide insights in JSON format:
