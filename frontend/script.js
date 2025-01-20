@@ -25,7 +25,7 @@ form.addEventListener('submit', async (e) => {
   try {
     const formData = new FormData(form);
     uploadedFiles.forEach((file) => formData.append('images', file));
-    const response = await fetch('http://localhost:9000/analyze', {
+    const response = await fetch('http://localhost:8080/analyze', {
       method: 'POST',
       body: formData
     });
