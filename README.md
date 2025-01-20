@@ -96,7 +96,6 @@ SOCIALMEDIAANALYZER/
 
 ## 🖼 Demo
 
-![Demo Screenshot](frontend/assets/bg.jpg)
 
 ## 📜 License
 
