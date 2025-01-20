@@ -26,7 +26,7 @@ form.addEventListener('submit', async (e) => {
     const formData = new FormData(form);
     uploadedFiles.forEach((file) => formData.append('images', file));
 
-    const response = await fetch(`social-media-analyzer-production-d85e/analyze`, {
+    const response = await fetch(`https://social-media-analyzer-production-d85e.up.railway.app/analyze`, {
       method: 'POST',
       body: formData
     });
