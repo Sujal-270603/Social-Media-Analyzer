@@ -8,7 +8,7 @@ import OpenAI from 'openai';
 const app = express();
 const port = process.env.PORT || 9000;
 
-dotenv.config({ path: '../.env' });
+dotenv.config({ path: './.env' });
 
 app.use(cors({ origin: process.env.CORS_ORIGIN || '*', credentials: true }));
 

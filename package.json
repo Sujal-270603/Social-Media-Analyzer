@@ -1,16 +1,16 @@
 {
-  "name": "backend",
+  "name": "socialmediaanalyzer",
   "version": "1.0.0",
+  "description": "Social Media Content Analyzer is a web application designed to help users analyze and improve their social media posts by providing insights such as tone analysis, predicted likes, suggested hashtags, and engagement improvement tips. The project uses modern technologies such as Node.js, OpenAI, and Google Vision API to deliver powerful content analysis.",
   "main": "index.js",
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon index.js"
+    "dev": "nodemon ./backend/index.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": "",
   "dependencies": {
     "@google-cloud/vision": "^4.3.2",
     "axios": "^1.7.9",
@@ -21,9 +21,8 @@
     "express": "^4.21.2",
     "multer": "^1.4.5-lts.1",
     "nodemon": "^3.1.9",
-    "openai": "^4.78.1",
+    "openai": "^4.79.1",
     "redis": "^4.7.0",
-    "serpapi": "^2.1.0",
     "sharp": "^0.33.5"
   }
 }
