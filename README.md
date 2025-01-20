@@ -1,64 +1,21 @@
-Social Media Content Analyzer
-📋 Overview
+# Social Media Content Analyzer
 
-The Social Media Content Analyzer is a web application designed to help users optimize their social media posts by providing insights such as tone analysis, predicted engagement, and suggested improvements. This tool leverages OpenAI for natural language processing and generates actionable insights for enhancing user-generated content.
-✨ Features
+Social Media Content Analyzer is a web application designed to help users analyze and improve their social media posts by providing insights such as tone analysis, predicted likes, suggested hashtags, and engagement improvement tips. The project uses modern technologies such as Node.js, OpenAI, and Google Vision API to deliver powerful content analysis.
 
-    Analyze the tone of social media posts (positive, neutral, negative).
-    Predict engagement metrics such as likes and engagement scores.
-    Get suggested hashtags to maximize post visibility.
-    Recommendations for optimal posting time based on content.
-    Engagement improvement tips to optimize user reach.
-    A modern and responsive user interface with dark mode support.
- 
-🛠️ Technologies Used
-Frontend
+## 🛠 Features
 
-    HTML5, CSS3, JavaScript
-    Bootstrap 5 for responsive UI design
-    Dark mode and gradient background animations
+- Analyze the tone of social media posts (Positive/Negative/Neutral).
+- Predict the number of likes based on post content.
+- Suggest hashtags and engagement improvement tips.
+- Provide optimal posting time for better reach.
+- Fully responsive frontend using HTML, CSS, and JavaScript.
+- Backend powered by Node.js and OpenAI integration.
 
-Backend
+## 📂 Folder Structure
 
-    Node.js and Express.js for server-side operations
-    OpenAI API for content analysis
-    CORS for cross-origin requests
+The project is structured as follows:
 
-🚀 How to Run the Project Locally
-Prerequisites
-
-    Node.js and npm installed
-    A valid OpenAI API Key
-
-Steps
-
-    Clone the Repository
-
-git clone https://github.com/Sujal-270603/Social-Media-Analyzer.git
-cd Social-Media-Analyzer
-
-Install Dependencies
-
-npm install
-
-Set Up Environment Variables
-
-    Create a .env file in the root directory and add the following:
-
-    PORT=9000
-    OPENAI_API_Key=your_openai_api_key
-    CORS_ORIGIN=http://localhost:3000
-
-Run the Application
-
-    Start the backend server:
-
-        npm start
-
-        Open the frontend in your browser at http://localhost:3000.
-
-📄 Folder Structure
-
+```
 SOCIALMEDIAANALYZER/
 ├── backend/                   # Backend application
 │   ├── controllers/           # Route handling logic
@@ -83,29 +40,68 @@ SOCIALMEDIAANALYZER/
 ├── .env                       # Environment variables
 ├── .gitignore                 # Ignored files for Git
 ├── README.md                  # Project documentation
+```
 
+## 🚀 Technologies Used
 
-🎯 Future Enhancements
+### Frontend:
+- HTML
+- CSS
+- JavaScript
+- Bootstrap
 
-    Add web scraping functionality to gather real-time trending hashtags.
-    Integrate user authentication for personalized insights.
-    Enable backend image processing for deeper visual analysis.
-    Support multilingual content analysis.
+### Backend:
+- Node.js
+- Express.js
+- OpenAI API
+- Google Vision API (Optional for image processing)
 
-🤝 Contributing
+## 🛠 Prerequisites
 
-    Fork the repository.
-    Create a new branch for your feature:
+- Node.js installed on your system.
+- OpenAI API Key.
+- Google Cloud Vision API Key (Optional).
 
-git checkout -b feature-name
+## 🔧 Setup Instructions
 
-Commit and push your changes:
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/<your-username>/Social-Media-Analyzer.git
+   ```
+2. Navigate to the project directory:
+   ```bash
+   cd SocialMediaAnalyzer
+   ```
+3. Install backend dependencies:
+   ```bash
+   cd backend
+   npm install
+   ```
+4. Install frontend dependencies (if applicable):
+   ```bash
+   cd ../frontend
+   npm install
+   ```
+5. Create a `.env` file in the `backend/` directory and add your keys:
+   ```
+   OPENAI_API_KEY=your_openai_api_key
+   GOOGLE_APPLICATION_CREDENTIALS=path_to_google_cloud_key.json
+   ```
+6. Start the backend server:
+   ```bash
+   cd backend
+   npm start
+   ```
+7. Open the `frontend/index.html` file in your browser.
 
-    git commit -m "Add feature description"
-    git push origin feature-name
+## 🖼 Demo
 
-    Open a pull request.
+![Demo Screenshot](frontend/assets/bg.jpg)
 
-📧 Contact
+## 📜 License
 
-For questions or suggestions, feel free to reach out to Sujal-270603.
+This project is licensed under the MIT License. Feel free to use and modify it for personal or commercial projects.
+
+## 🤝 Contributing
+
+Contributions are welcome! If you'd like to contribute, please fork the repository and submit a pull request.
