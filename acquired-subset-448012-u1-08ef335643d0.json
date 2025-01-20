@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "acquired-subset-448012-u1",
+  "private_key_id": "08ef335643d02fb1d7cdaf2a1f1cd59c3eeacaf1",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDqMtpVsiU1Vv/5\n5SZlRQ6fk9s/GZLba6CGcpN0tRRwgO+Cde5T6o61CGcRW29ih9JCCFS4eQTCVUiS\nUjAB1HVqjBUn3zQoCQ0BwlhdCsgSan9esfe1I7PX5q2bSuUkTUGO8jD/qL3/zmFJ\nLJBbzQsoPwlsmBajr+0Gl20he/epkgkTLgFdxHJu/qxKmx7iP9b+P0BPA910Rafz\n2YyybixXcyD3dv486nrUgQk7T0bjbHpfQzhaXj6x4ABfPTotohSKz1keSzYaO8kB\n6ZuAbcC8DPzamfY3ta7wFrQCV/PFTGqC9BLY7qHB7fcje/7rc+W+B+3XfXu9ww5u\nwoIt04oNAgMBAAECggEAT5b4nCbufjISy9oUMlZFofWdjNQkFG1/IDHP6tmfGJy4\nyJ1LYTlVRjCU1lE8iT+fNNGf+REnjONuxksoBXcucAcrKWGxV+m7gd2KKhR/6cJH\nhub0R5rag4TheuT4+l1G6k1kWX3/E/APH88FQC1unT7O9Ri6mOYwpwzPCZIXmIhi\nDgTWMOTA3l5pb/uwvspKYSNFfhHvWD5zN7RSKLr5IHW7QHc5da1VcS4MDDVdvehd\nbOWhjQyQc6xu0CWL4a9ZZHG1Meh7NIjwrvfjX2LUgcTvGiDQNEsZFfMlDRTkr0SD\nWgaX0Qo7xXJe+Jtt9uMyYK5O4N4o/9OY7iwPxKHEAQKBgQD8FdRFoKE1yeQsOn0k\nJsIHYscxXCUU7qYH3OnOYxZOYD5ZiTG4bQAzlkw4FXVvnM0HlcgFxj2mnsUcdrcQ\nq/GYshiqwAzKOFkmOR07FZaB4HABOcQ4dzUScJ+MGpKHp5XyCpg3hdvLpxqVOVah\nsI/qqekED/Ok/5Q2QYOFkuZlTwKBgQDt1eo8l62zC7uDk15Wv/ZZaC+FvOZabY6S\n9h09PYmAOZwvRH64ylHf51ySr2XdTqUE7vaeIk9V3XCQFeY1MY9v2VJXJ3dIPQ5Y\nlBokkEloXkNo4WM7TW4RFWTSkcWV/9BfG44K3nPK49vKnbRefaLFVTdgxwVPxwy4\nhjM9hEm74wKBgQD2yuQ7mmvZfiNNjaFwYCV7F6CN2XlQSefwML4R2X5AEwdXnvI3\nbTdSSeWqzo9fSvKLZ38g8BjxY+Tz3eGRh9SKOmnd2RFsdMgKnMXaT2M/GZxuBsDs\nywABYpNAlc840cAB649kZD9v3NQwnacLuxDam6fN21QcCD9w8qixf8TiDwKBgCbG\nsqrwW9yONCNOmpnwMD0BdIYMd04VAKLLR5cdelaSjflS5IpCSjkEIp6zxBrh4Ju+\nTi0YEPFB6kFDoMXZb7Zfq0IUaCk58yXT97MwZxeCDuGBpckcZa6ZW1fNdnZvP8zR\n1EXHYP+aSNJvBeJF/4zGyQGZUS9hl5xaHO6Rq+fbAoGBAKuC09Q2iYt84vDAKbkU\nQdQg8XLwxLp3HYQCDf7fUEBUeBAmQzivSf8KECNLzH/mQgXcAjIEho+HwXKQKM0A\n37hdCG7D4CSVZCbBWPVqhcaEVhkVROf/1tofbYqhbtOSc/LgjyIpzYBO58zPAiu0\nknix9Vc7pjvQNC5LpK0r0+cs\n-----END PRIVATE KEY-----\n",
+  "client_email": "sujal-1-unthinkable@acquired-subset-448012-u1.iam.gserviceaccount.com",
+  "client_id": "110738197026594141343",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/sujal-1-unthinkable%40acquired-subset-448012-u1.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}
