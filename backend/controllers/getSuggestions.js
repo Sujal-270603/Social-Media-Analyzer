@@ -3,6 +3,7 @@ import { openAIClient } from "../index.js";
 import fs from 'fs';
 
 async function analyzePost(content, platform, audienceSize, hashtags, nature, imageInsights) {
+    console.log(imageInsights)
     const prompt = `Analyze the following social media post and provide insights in JSON format:
       {
         "tone": "positive/negative/neutral",
@@ -59,7 +60,7 @@ const getSuggestions = async (req, res) => {
     
           for (const file of req.files) {
             try {
-              console.log(file)
+              //console.log(file)
               const [result] = await visionClient.labelDetection(file.path);
               const labels = result.labelAnnotations.map((label) => label.description).join(', ');
               imageInsights += `${labels}\n`;
@@ -72,7 +73,7 @@ const getSuggestions = async (req, res) => {
     
         // Generate analysis
         const analysis = await analyzePost(content, platform, audienceSize, hashtags, nature, imageInsights);
-        console.log(analysis);
+        //console.log(analysis);
         return res.status(200).json({
           success: true,
           ...analysis,

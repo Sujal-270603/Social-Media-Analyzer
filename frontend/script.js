@@ -7,6 +7,7 @@ const hashtagsEl = document.getElementById('hashtags');
 const suggestionsEl = document.getElementById('suggestions');
 const optimalTimeEl = document.getElementById('optimalTime');
 const engagementScoreEl = document.getElementById('engagementScore');
+const imageSuggstionsEL = document.getElementById('imageSuggestions');
 const darkModeToggle = document.getElementById('darkModeToggle');
 const loadingOverlay = document.getElementById('loadingOverlay');
 const dropZone = document.getElementById('dropZone');
@@ -26,7 +27,7 @@ form.addEventListener('submit', async (e) => {
     const formData = new FormData(form);
     uploadedFiles.forEach((file) => formData.append('images', file));
 
-    const response = await fetch(`https://social-media-analyzer-production-d85e.up.railway.app/analyze`, {
+    const response = await fetch(`http://localhost:8080/analyze`, {
       method: 'POST',
       body: formData
     });
@@ -38,6 +39,7 @@ form.addEventListener('submit', async (e) => {
     suggestionsEl.textContent = `Engagement Improvement: ${result.engagement_improvement.join(', ')}`;
     optimalTimeEl.textContent = `Optimal Posting Time: ${result.optimal_posting_time}`;
     engagementScoreEl.textContent = `Engagement Score: ${result.engagement_score}`;
+    imageSuggstionsEL.textContent = `Suggestions about image: ${result.image_suggestions}`;
     responseContainer.classList.remove('d-none');
   } catch (error) {
     console.error(error);
@@ -48,21 +50,52 @@ form.addEventListener('submit', async (e) => {
 });
 
 dropZone.addEventListener('click', () => imageInput.click());
-dropZone.addEventListener('dragover', (e) => {
-  e.preventDefault();
-  dropZone.classList.add('dragover');
-});
+  dropZone.addEventListener('dragover', (e) => {
+    e.preventDefault();
+    dropZone.classList.add('dragover');
+  });
+  dropZone.addEventListener('dragleave', () => {
+    dropZone.classList.remove('dragover');
+  });
+  dropZone.addEventListener('drop', (e) => {
+    e.preventDefault();
+    dropZone.classList.remove('dragover');
+    handleFiles(e.dataTransfer.files);
+  });
 
-dropZone.addEventListener('dragleave', () => {
-  dropZone.classList.remove('dragover');
-});
+  imageInput.addEventListener('change', () => handleFiles(imageInput.files));
 
-dropZone.addEventListener('drop', (e) => {
-  e.preventDefault();
-  dropZone.classList.remove('dragover');
-  handleFiles(e.dataTransfer.files);
-});
+  function handleFiles(files) {
+    Array.from(files).forEach((file) => {
+      //console.log(file);
+      if (!uploadedFiles.some((uploadedFile) => uploadedFile.name === file.name)) {
+        uploadedFiles.push(file);
+        addImageToPreview(file);
+      }
+    });
+  }
 
-imageInput.addEventListener('change', () => {
-  handleFiles(imageInput.files);
-});
+  function addImageToPreview(file) {
+    const reader = new FileReader();
+    reader.onload = (e) => {
+      const wrapper = document.createElement('div');
+      wrapper.className = 'image-preview-wrapper';
+
+      const img = document.createElement('img');
+      img.src = e.target.result;
+      img.className = 'image-preview';
+
+      const removeBtn = document.createElement('button');
+      removeBtn.className = 'remove-image';
+      removeBtn.innerHTML = '✖';
+      removeBtn.addEventListener('click', () => {
+        wrapper.remove();
+        uploadedFiles = uploadedFiles.filter((f) => f.name !== file.name);
+      });
+
+      wrapper.appendChild(img);
+      wrapper.appendChild(removeBtn);
+      imagePreviewContainer.appendChild(wrapper);
+    };
+    reader.readAsDataURL(file);
+}

@@ -5,7 +5,7 @@ import vision from '@google-cloud/vision';
   
   // Google Vision API configuration
 const visionClient = new vision.ImageAnnotatorClient({
-    keyFilename: process.env.GOOGLE_APPLICATION_CREDENTIALS,
+    keyFilename: './acquired-subset-448012-u1-1c0418faf63f.json',
 });
 
 export { visionClient}
