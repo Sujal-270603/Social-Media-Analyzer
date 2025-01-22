@@ -9,7 +9,7 @@ async function analyzePost(content, platform, audienceSize, hashtags, nature, im
         "tone": "positive/negative/neutral",
         "predicted_likes": number,
         "suggested_hashtags": ["list", "of", "hashtags"],
-        "engagement_improvement": ["list of suggestions for improvement"],
+        "engagement_improvement": ["list of suggestions for improvement with examples"],
         "optimal_posting_time": "time in HH:MM AM/PM format",
         "engagement_score": number,
         "image_suggestions": ["List at least two suggestions on images for better engagement better than ${imageInsights}"]

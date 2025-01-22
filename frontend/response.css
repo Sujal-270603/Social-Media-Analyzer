@@ -1,0 +1,141 @@
+/* General Body Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #6dd5ed, #2193b0);
+    color: #333;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    transition: all 0.3s ease;
+  }
+  
+  .dark-mode {
+    background: linear-gradient(135deg, #434343, #000000);
+    color: #fff !important;
+  }
+  
+  /* Response Page Container */
+  .response-page-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .response-container {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    max-width: 600px;
+    width: 100%;
+    text-align: center;
+    transition: all 0.3s ease;
+  }
+  
+  .dark-mode .response-container {
+    background: #333333;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+  }
+  
+  /* Title Styling */
+  .title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #007bff;
+  }
+  
+  .dark-mode .title {
+    color: #66d9ff;
+  }
+  
+  .subtitle {
+    font-size: 1rem;
+    color: #555;
+  }
+  
+  .dark-mode .subtitle {
+    color: #ccc;
+  }
+  
+  /* Dark Mode Toggle */
+  #darkModeToggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: #6a11cb;
+    color: #fff;
+    border: none;
+    border-radius: 30px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .dark-mode #darkModeToggle {
+    background: #555;
+    color: #66d9ff;
+  }
+  
+  /* Back Button */
+  .btn-back {
+    display: inline-block;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 30px;
+    background: linear-gradient(135deg, #ff5722, #e64a19);
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    transition: all 0.3s ease;
+  }
+  
+  .btn-back:hover {
+    background: linear-gradient(135deg, #e64a19, #ff5722);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  .dark-mode .btn-back {
+    background: #444;
+    color: #66d9ff;
+  }
+  
+  /* Result Items */
+  .result-item {
+    margin-bottom: 15px;
+    text-align: left;
+  }
+  
+  .result-label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+    color: #007bff;
+  }
+  
+  .dark-mode .result-label {
+    color: #66d9ff;
+  }
+  
+  .result-value {
+    font-size: 1.1rem;
+    color: #333;
+  }
+  
+  .dark-mode .result-value {
+    color: #ddd;
+  }
+  
+  .result-list {
+    list-style-type: disc;
+    padding-left: 20px;
+  }
+  
+  .result-list li {
+    margin-bottom: 5px;
+  }
+  

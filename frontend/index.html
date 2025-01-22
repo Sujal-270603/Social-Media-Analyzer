@@ -10,23 +10,35 @@
 <body>
   <!-- Page Loading Animation -->
   <div id="loadingOverlay" class="loading-overlay hidden">
-    <div class="spinner-border text-light" role="status">
-      <span class="visually-hidden">Loading...</span>
+    <div class="spinner-container">
+      <div class="spinner-border text-light" role="status">
+        <span class="visually-hidden">Loading...</span>
+      </div>
+      <p class="loading-text">Analyzing your content, please wait...</p>
     </div>
   </div>
+  
 
+  <!-- Dark Mode Toggle -->
   <button id="darkModeToggle" class="dark-mode-toggle">Enable Dark Mode</button>
 
-  <div class="container">
+  <div class="form-page-container">
     <div class="form-container">
-      <h2 class="text-center">Social Media Content Analyzer</h2>
-      <form id="analyzerForm">
-        <div class="mb-3">
-          <label for="content" class="form-label">Post Content</label>
-          <textarea class="form-control" id="content" name="content" rows="3" placeholder="Enter your post content here" required></textarea>
+      <h2 class="text-center mb-4">✨ Social Media Content Analyzer ✨</h2>
+      <form id="analyzerForm" action="response.html">
+        <div class="mb-4">
+          <label for="content" class="form-label text-start">Post Content</label>
+          <textarea
+            class="form-control"
+            id="content"
+            name="content"
+            rows="4"
+            placeholder="Write your post content here..."
+            required
+          ></textarea>
         </div>
-        <div class="mb-3">
-          <label for="platform" class="form-label">Platform</label>
+        <div class="mb-4">
+          <label for="platform" class="form-label text-start">Platform</label>
           <select class="form-select" id="platform" name="platform" required>
             <option value="">Select Platform</option>
             <option value="Twitter">Twitter</option>
@@ -34,12 +46,19 @@
             <option value="Facebook">Facebook</option>
           </select>
         </div>
-        <div class="mb-3">
-          <label for="audienceSize" class="form-label">Audience Size</label>
-          <input type="number" class="form-control" id="audienceSize" name="audienceSize" placeholder="Enter your audience size" required>
+        <div class="mb-4">
+          <label for="audienceSize" class="form-label text-start">Audience Size</label>
+          <input
+            type="number"
+            class="form-control"
+            id="audienceSize"
+            name="audienceSize"
+            placeholder="Enter your audience size"
+            required
+          />
         </div>
-        <div class="mb-3">
-          <label for="nature" class="form-label">Post Nature</label>
+        <div class="mb-4">
+          <label for="nature" class="form-label text-start">Post Nature</label>
           <select class="form-select" id="nature" name="nature" required>
             <option value="">Select Nature</option>
             <option value="Motivational">Motivational</option>
@@ -49,30 +68,21 @@
             <option value="Funny">Funny</option>
           </select>
         </div>
-        <div class="mb-3">
-          <label class="form-label">Upload Images</label>
+        <div class="mb-4">
+          <label class="form-label text-start">Upload Images</label>
           <div id="dropZone" class="drop-zone">
             Drag & Drop Images Here or Click to Upload
           </div>
-          <input type="file" id="image" name="images" multiple hidden>
+          <input type="file" id="image" name="images" multiple hidden />
           <div id="imagePreviewContainer" class="image-preview-container"></div>
         </div>
-        <button type="submit" class="btn btn-primary w-100">Analyze Post</button>
+        <button type="submit" class="btn btn-primary w-100 btn-custom">
+          Analyze Post
+        </button>
       </form>
-
-      <div id="responseContainer" class="response-container d-none">
-        <h4>Analysis Results</h4>
-        <p id="tone"></p>
-        <p id="predictedLikes"></p>
-        <p id="hashtags"></p>
-        <p id="suggestions"></p>
-        <p id="optimalTime"></p>
-        <p id="engagementScore"></p>
-        <p id="imageSuggestions"></p>
-      </div>
     </div>
   </div>
 
-  <script type="module" src="script.js"></script>
+  <script src="form.js"></script>
 </body>
 </html>

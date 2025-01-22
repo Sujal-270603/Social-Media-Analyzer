@@ -27,20 +27,38 @@ form.addEventListener('submit', async (e) => {
     const formData = new FormData(form);
     uploadedFiles.forEach((file) => formData.append('images', file));
 
-    const response = await fetch(`https://social-media-analyzer-production-d759.up.railway.app//analyze`, {
+    const response = await fetch(`http://localhost:8080/analyze`, {
       method: 'POST',
       body: formData
     });
     if (!response.ok) throw new Error(`Server Error: ${response.statusText}`);
     const result = await response.json();
     toneEl.textContent = `Tone: ${result.tone}`;
-    predictedLikesEl.textContent = `Predicted Likes: ${result.predicted_likes}`;
-    hashtagsEl.textContent = `Suggested Hashtags: ${result.suggested_hashtags.join(', ')}`;
-    suggestionsEl.textContent = `Engagement Improvement: ${result.engagement_improvement.join(', ')}`;
-    optimalTimeEl.textContent = `Optimal Posting Time: ${result.optimal_posting_time}`;
-    engagementScoreEl.textContent = `Engagement Score: ${result.engagement_score}`;
-    imageSuggstionsEL.textContent = `Suggestions about image: ${result.image_suggestions}`;
+    predictedLikesEl.textContent = `${result.predicted_likes}`;
+    hashtagsEl.textContent = `${result.suggested_hashtags.join(', ')}`;
+    suggestionsEl.textContent = '';
+    optimalTimeEl.textContent = `${result.optimal_posting_time}`;
+    engagementScoreEl.textContent = `${result.engagement_score}`;
+    imageSuggstionsEL.textContent = ``;
+
+    const engagementSuggestionsList = document.createElement('ul');
+    result.engagement_improvement.forEach((suggestion) => {
+      const listItem = document.createElement('li');
+      listItem.textContent = suggestion;
+      engagementSuggestionsList.appendChild(listItem);
+    });
+    suggestionsEl.appendChild(engagementSuggestionsList);
+
+    const imageSuggestionsList = document.createElement('ul');
+    result.image_suggestions.forEach((suggestion) => {
+      const listItem = document.createElement('li');
+      listItem.textContent = suggestion;
+      imageSuggestionsList.appendChild(listItem);
+    }); // Clear any previous content
+    imageSuggstionsEL.appendChild(imageSuggestionsList);
+
     responseContainer.classList.remove('d-none');
+
   } catch (error) {
     console.error(error);
     alert('Error: ' + error.message);
