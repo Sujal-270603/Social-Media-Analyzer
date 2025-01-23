@@ -2,6 +2,9 @@
 body {
     font-family: 'Arial', sans-serif;
     background: linear-gradient(135deg, #6dd5ed, #2193b0);
+    background-image: url(bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
     color: #333;
     margin: 0;
     padding: 0;
@@ -29,9 +32,10 @@ body {
     background: #ffffff;
     padding: 30px;
     border-radius: 20px;
+    background: rgba(255, 255, 255, 0.7);
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
-    max-width: 600px;
-    width: 100%;
+    /* width: 600px; */
+    width: 70%;
     text-align: center;
     transition: all 0.3s ease;
   }

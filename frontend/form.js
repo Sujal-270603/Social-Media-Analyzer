@@ -68,10 +68,31 @@ function addImageToPreview(file) {
   reader.readAsDataURL(file);
 }
 // Dark mode toggle functionality
-darkModeToggle.addEventListener("click", () => {
-  const isDarkMode = document.body.classList.toggle("dark-mode");
-  darkModeToggle.textContent = isDarkMode ? "Disable Dark Mode" : "Enable Dark Mode";
+// Get references to the dark mode toggle button
+// const darkModeToggle = document.getElementById('darkModeToggle');
+
+// Check localStorage for the current dark mode state
+const isDarkMode = localStorage.getItem('darkMode') === 'true';
+
+// Apply dark mode class if it was enabled previously
+if (isDarkMode) {
+  document.body.classList.add('dark-mode');
+  darkModeToggle.textContent = 'Disable Dark Mode';
+} else {
+  darkModeToggle.textContent = 'Enable Dark Mode';
+}
+
+// Add event listener to the toggle button
+darkModeToggle.addEventListener('click', () => {
+  const isDarkModeEnabled = document.body.classList.toggle('dark-mode');
+  darkModeToggle.textContent = isDarkModeEnabled
+    ? 'Disable Dark Mode'
+    : 'Enable Dark Mode';
+
+  // Save the state in localStorage
+  localStorage.setItem('darkMode', isDarkModeEnabled);
 });
+
 form.addEventListener("submit", async (e) => {
   e.preventDefault();
   loadingOverlay.classList.remove("hidden");

@@ -2,6 +2,9 @@
 body {
   font-family: 'Arial', sans-serif;
   background: linear-gradient(135deg, #6dd5ed, #2193b0);
+  background-image: url(bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
   color: #333;
   margin: 0;
   padding: 0;
@@ -26,9 +29,9 @@ body {
 }
 
 .form-container {
-  max-width: 700px;
+  width: 900px;
   padding: 30px;
-  background: #ffffff;
+  background: rgba(255, 255, 255, 0.7);
   border-radius: 20px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
   transition: all 0.3s ease;
@@ -51,6 +54,10 @@ body {
 }
 
 /* Form Controls */
+#content{
+  height: 15px;
+}
+
 .form-control,
 .form-select {
   border-radius: 10px;
@@ -67,6 +74,10 @@ body {
   border: 1px solid #555;
 }
 
+.dark-mode ::placeholder {
+  color: #fff !important; /* Light gray */ 
+  /* font-style: italic; Optional */
+}
 /* Drop Zone Styling */
 .drop-zone {
   padding: 20px;
