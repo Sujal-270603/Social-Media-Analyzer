@@ -77,7 +77,7 @@ form.addEventListener("submit", async (e) => {
   loadingOverlay.classList.remove("hidden");
   const formData = new FormData(form);
   try {
-    const response = await fetch("https://social-media-analyzer-production-d759.up.railway.app/analyze", {
+    const response = await fetch("http://localhost:8080/analyze", {
       method: "POST",
       body: formData,
     });

@@ -4,6 +4,7 @@ import { getSuggestions } from './controllers/getSuggestions.js';
 import dotenv from 'dotenv';
 import cors from 'cors';
 import OpenAI from 'openai';
+import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
 
